@@ -1,0 +1,52 @@
+{
+    "usingComponents": {
+        "t-button": "tdesign-miniprogram/button/button",
+        "t-tab-bar": "tdesign-miniprogram/tab-bar/tab-bar",
+        "t-tab-bar-item": "tdesign-miniprogram/tab-bar-item/tab-bar-item"
+    },
+    "pages": [
+        "pages/index/index",
+        "pages/test/index",
+        "pages/person/index"
+    ],
+    "window": {
+        "navigationBarTextStyle": "black",
+        "navigationStyle": "custom"
+    },
+    "tabBar": {
+        "list": [
+            {
+                "pagePath": "pages/index/index",
+                "text": "首页",
+                "iconPath": "images/tabbar/home.png",
+                "selectedIconPath": "images/tabbar/home-selected.png"
+            },
+            {
+                "pagePath": "pages/test/index",
+                "text": "测试页",
+                "iconPath": "images/tabbar/test.png",
+                "selectedIconPath": "images/tabbar/test-selected.png"
+            },
+            {
+                "pagePath": "pages/person/index",
+                "text": "个人中心",
+                "iconPath": "images/tabbar/person.png",
+                "selectedIconPath": "images/tabbar/person-selected.png"
+            }
+        ]
+    },
+    "renderer": "skyline",
+    "rendererOptions": {
+        "skyline": {
+            "defaultDisplayBlock": true,
+            "defaultContentBox": true,
+            "tagNameStyleIsolation": "legacy",
+            "disableABTest": true,
+            "sdkVersionBegin": "3.0.0",
+            "sdkVersionEnd": "15.255.255"
+        }
+    },
+    "componentFramework": "glass-easel",
+    "sitemapLocation": "sitemap.json",
+    "lazyCodeLoading": "requiredComponents"
+}

@@ -1,0 +1,15 @@
+<!--index.wxml-->
+<navigation-bar
+    title="小杜食堂"
+    back="{{false}}"
+    color="black"
+    background="#FFF"
+></navigation-bar>
+<scroll-view class="scrollarea" scroll-y type="list">
+    <view>
+        首页
+        <t-button theme="primary" size="small">
+            填充按钮
+        </t-button>
+    </view>
+</scroll-view>

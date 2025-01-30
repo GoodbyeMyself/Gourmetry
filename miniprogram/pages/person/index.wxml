@@ -1,0 +1,22 @@
+<!--index.wxml-->
+<navigation-bar
+    title="小杜食堂"
+    back="{{false}}"
+    color="black"
+    background="#FFF"
+></navigation-bar>
+<scroll-view class="scrollarea" scroll-y type="list">
+    <!-- 头像区域 -->
+    <view class="top">
+        <view class="user-img">
+            <image src="/images/avatar.png"></image>
+        </view>
+    </view>
+    <!-- 详细信息区域 -->
+    <view class="menu">
+        <view class="item">姓名：小杜老师</view>
+        <view class="item">18</view>
+        <view class="item">女</view>
+        <view class="item">我们最漂亮</view>
+    </view>
+</scroll-view>
