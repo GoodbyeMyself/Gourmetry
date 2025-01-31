@@ -5,8 +5,6 @@
     color="black"
     background="#FFF"
 ></navigation-bar>
-<scroll-view class="scrollarea" scroll-y type="list">
-    <view>
-        测试页
-    </view>
-</scroll-view>
+<view>
+    测试页
+</view>
