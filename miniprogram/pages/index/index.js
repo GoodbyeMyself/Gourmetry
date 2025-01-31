@@ -1,57 +1,19 @@
-const image = 'https://tdesign.gtimg.com/mobile/demos/example2.png';
-
-const items = new Array(12).fill({ label: '标题文字', image }, 0, 12);
+// 菜品列表
+import categories from '../../config/categories.js';
 
 Page({
     offsetTopList: [],
     data: {
         // 第一个页签的索引
         sideBarIndex: 0,
+        // 滚动位置
         scrollTop: 0,
-        categories: [{
-            label: '早餐系列',
-            title: '早餐系列',
-            badgeProps: {},
-            items
-        }, {
-            label: '健康蔬菜',
-            title: '健康蔬菜',
-            badgeProps: {
-                dot: true,
-            },
-            items: items.slice(0, 10)
-        }, {
-            label: '无肉不欢',
-            title: '无肉不欢',
-            badgeProps: {},
-            items
-        }, {
-            label: '来点主食',
-            title: '来点主食',
-            badgeProps: {},
-            items: items.slice(0, 6)
-        }, {
-            label: '小吃甜点',
-            title: '小吃甜点',
-            badgeProps: {
-                count: 8,
-            },
-            items: items.slice(0, 8)
-        },{
-            label: '饮料酒水',
-            title: '饮料酒水',
-            badgeProps: {
-                count: 8,
-            },
-            items: items.slice(0, 8)
-        }, {
-            label: '特殊服务',
-            title: '特殊服务',
-            badgeProps: {},
-            // disabled: true,
-            items: items.slice(0, 8)
-        }],
-        navbarHeight: 0
+        // 商品列表
+        categories,
+        // 导航栏高度
+        navbarHeight: 0,
+        // 购物车
+        cart: []
     },
     onLoad() {
         this.getCustomNavbarHeight();
@@ -68,7 +30,30 @@ Page({
     },
     onSideBarChange(e) {
         const { value } = e.detail;
-        console.log('---', value);
-        this.setData({ sideBarIndex: value, scrollTop: 0 });
+
+        this.setData({
+            sideBarIndex: value,
+            scrollTop: 0
+        });
+    },
+    onQuantityChange(event) {
+        const cargo = event.currentTarget.dataset.cargo;
+
+        const cart = this.data.cart;
+
+        const existingCargo = cart.find(item => item.id === cargo.id);
+
+        if (existingCargo) {
+            existingCargo.quantity += 1;
+        } else {
+            cargo.quantity = 1;
+            cart.push(cargo);
+        }
+
+        this.setData({
+            cart: cart
+        });
+
+        console.log('购物车:', this.data.cart);
     }
 });

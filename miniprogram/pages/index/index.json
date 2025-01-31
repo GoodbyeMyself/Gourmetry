@@ -6,6 +6,7 @@
         "t-cell-group": "tdesign-miniprogram/cell-group/cell-group",
         "t-cell": "tdesign-miniprogram/cell/cell",
         "t-image": "tdesign-miniprogram/image/image",
-        "t-icon": "tdesign-miniprogram/icon/icon"
+        "t-icon": "tdesign-miniprogram/icon/icon",
+        "t-button": "tdesign-miniprogram/button/button"
     }
 }

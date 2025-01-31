@@ -13,6 +13,7 @@
             wx:key="label"
             value="{{item.value || index}}"
             label="{{item.label}}"
+            icon="{{item.icon}}"
             disabled="{{item.disabled}}"
             badge-props="{{item.badgeProps}}"
         />
@@ -30,8 +31,20 @@
             <view class="title">{{item.title || item.label}}</view>
             <t-cell-group>
                 <block wx:for="{{item.items}}" wx:key="index" wx:for-item="cargo">
-                    <t-cell t-class-left="cell" title="{{cargo.label}}{{index}}">
-                        <t-image shape="round" src="{{cargo.image}}" slot="image" lazy t-class="image" />
+                    <t-cell
+                        t-class-left="cell"
+                        title="{{cargo.label}}"
+                        image="{{cargo.image}}"
+                    >
+                        <t-button
+                            size="extra-small"
+                            bindtap="onQuantityChange"
+                            data-cargo="{{cargo}}"
+                            slot="note"
+                            theme="primary"
+                        >
+                            想吃
+                        </t-button>
                     </t-cell>
                 </block>
             </t-cell-group>

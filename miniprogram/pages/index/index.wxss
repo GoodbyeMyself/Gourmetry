@@ -22,8 +22,20 @@
     display: flex;
     height: 100vh;
     overflow: hidden;
-
     --td-grid-item-text-font-size: 24rpx;
+}
+
+.side-bar-wrapper .t-side-bar-item {
+    padding: 32rpx 18rpx;
+}
+
+.t-side-bar-item .t-icon {
+    font-size: 28rpx;
+    margin-right: 6rpx;
+}
+
+.t-side-bar-item .t-badge {
+    font-size: 28rpx;
 }
 
 .side-bar-wrapper .content {
