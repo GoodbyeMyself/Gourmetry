@@ -1,10 +1,4 @@
 <!--index.wxml-->
-<navigation-bar
-    title="小杜食堂"
-    back="{{false}}"
-    color="black"
-    background="#FFF"
-></navigation-bar>
 <scroll-view class="scrollarea" scroll-y type="list">
     <!-- 头像区域 -->
     <view class="top">

@@ -1,43 +1,42 @@
 <!--index.wxml-->
-<view class="custom-navbar">
-    <navigation-bar
-        title="小杜食堂"
-        back="{{false}}"
-        color="black"
-        background="#FFF"
-    ></navigation-bar>
+<view class="banner">
+    <view class="title">
+        <t-icon name="undertake-hold-up" size="42rpx" class="title-icon"/>
+        小杜老师的专属食堂
+    </view>
 </view>
-  <view class="side-bar-wrapper" style="height: calc(100vh - {{navbarHeight}}px)">
+<!-- 菜单 -->
+<view class="side-bar-wrapper" style="height: calc(100vh - {{navbarHeight}}px)">
     <t-side-bar value="{{sideBarIndex}}" bind:change="onSideBarChange">
-      <t-side-bar-item
-        wx:for="{{categories}}"
-        wx:key="label"
-        value="{{item.value || index}}"
-        label="{{item.label}}"
-        disabled="{{item.disabled}}"
-        badge-props="{{item.badgeProps}}"
-      />
+        <t-side-bar-item
+            wx:for="{{categories}}"
+            wx:key="label"
+            value="{{item.value || index}}"
+            label="{{item.label}}"
+            disabled="{{item.disabled}}"
+            badge-props="{{item.badgeProps}}"
+        />
     </t-side-bar>
     <view class="content" style="transform: translateY(-{{sideBarIndex * 100}}%)">
-      <scroll-view
-        wx:for="{{categories}}"
-        wx:key="label"
-        class="section"
-        scroll-y
-        scroll-top="{{scrollTop}}"
-        scroll-with-animation
-        show-scrollbar="{{false}}"
-      >
-        <view class="title">{{item.title || item.label}}</view>
-        <t-cell-group>
-          <block wx:for="{{item.items}}" wx:key="index" wx:for-item="cargo">
-            <t-cell t-class-left="cell" title="{{cargo.label}}{{index}}">
-              <t-image shape="round" src="{{cargo.image}}" slot="image" lazy t-class="image" />
-            </t-cell>
-          </block>
-        </t-cell-group>
-      </scroll-view>
+        <scroll-view
+            wx:for="{{categories}}"
+            wx:key="label"
+            class="section"
+            scroll-y
+            scroll-top="{{scrollTop}}"
+            scroll-with-animation
+            show-scrollbar="{{false}}"
+        >
+            <view class="title">{{item.title || item.label}}</view>
+            <t-cell-group>
+                <block wx:for="{{item.items}}" wx:key="index" wx:for-item="cargo">
+                    <t-cell t-class-left="cell" title="{{cargo.label}}{{index}}">
+                        <t-image shape="round" src="{{cargo.image}}" slot="image" lazy t-class="image" />
+                    </t-cell>
+                </block>
+            </t-cell-group>
+        </scroll-view>
     </view>
-  </view>
+</view>
   
   

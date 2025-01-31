@@ -9,32 +9,44 @@ Page({
         sideBarIndex: 0,
         scrollTop: 0,
         categories: [{
-            label: '选项一',
-            title: '标题一',
+            label: '早餐系列',
+            title: '早餐系列',
             badgeProps: {},
             items
         }, {
-            label: '选项二',
-            title: '标题二',
+            label: '健康蔬菜',
+            title: '健康蔬菜',
             badgeProps: {
                 dot: true,
             },
             items: items.slice(0, 10)
         }, {
-            label: '选项三',
-            title: '标题三',
+            label: '无肉不欢',
+            title: '无肉不欢',
+            badgeProps: {},
+            items
+        }, {
+            label: '来点主食',
+            title: '来点主食',
             badgeProps: {},
             items: items.slice(0, 6)
         }, {
-            label: '选项四',
-            title: '标题四',
+            label: '小吃甜点',
+            title: '小吃甜点',
+            badgeProps: {
+                count: 8,
+            },
+            items: items.slice(0, 8)
+        },{
+            label: '饮料酒水',
+            title: '饮料酒水',
             badgeProps: {
                 count: 8,
             },
             items: items.slice(0, 8)
         }, {
-            label: '选项五',
-            title: '标题五',
+            label: '特殊服务',
+            title: '特殊服务',
             badgeProps: {},
             // disabled: true,
             items: items.slice(0, 8)
@@ -47,7 +59,7 @@ Page({
     getCustomNavbarHeight() {
         const query = wx.createSelectorQuery();
 
-        query.select('.custom-navbar').boundingClientRect();
+        query.select('.banner').boundingClientRect();
 
         query.exec((res) => {
             const { height = 0 } = res[0] || {};
