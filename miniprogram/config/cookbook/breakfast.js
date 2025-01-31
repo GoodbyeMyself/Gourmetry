@@ -3,23 +3,18 @@ const image = 'https://tdesign.gtimg.com/mobile/demos/example2.png';
 const items = [
     {
         label: '豆浆油条',
-        image,
+        image: 'https://gitee.com/GoodbyeMyself/gourmetry/raw/master/breakfast/doujiang.jpg',
         id: 'b-1'
     },
     {
         label: '包子馒头',
-        image,
+        image: 'https://gitee.com/GoodbyeMyself/gourmetry/raw/master/breakfast/baozi.jpg',
         id: 'b-2'
     },
     {
-        label: '鸡蛋灌饼',
-        image,
+        label: '鸡蛋饼',
+        image: 'https://gitee.com/GoodbyeMyself/gourmetry/raw/master/breakfast/jidanbing.jpg',
         id: 'b-3'
-    },
-    {
-        label: '煎饼果子',
-        image,
-        id: 'b-4'
     },
     {
         label: '小米粥',

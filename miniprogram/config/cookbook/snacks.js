@@ -2,11 +2,6 @@ const image = 'https://tdesign.gtimg.com/mobile/demos/example2.png';
 
 const items = [
     {
-        label: '煎饼果子',
-        image,
-        id: 's-1'
-    },
-    {
         label: '肉夹馍',
         image,
         id: 's-2'

@@ -36,15 +36,14 @@
                         title="{{cargo.label}}"
                         image="{{cargo.image}}"
                     >
-                        <t-button
-                            size="extra-small"
-                            bindtap="onQuantityChange"
+                        <t-icon
+                            name="add-circle-filled"
+                            size="42rpx"
+                            slot="right-icon"
                             data-cargo="{{cargo}}"
-                            slot="note"
-                            theme="primary"
-                        >
-                            想吃
-                        </t-button>
+                            bindtap="onQuantityChange"
+                            class="addcart"
+                        />
                     </t-cell>
                 </block>
             </t-cell-group>
