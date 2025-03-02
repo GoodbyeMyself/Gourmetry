@@ -16,6 +16,7 @@ Page({
         cart: []
     },
     onLoad() {
+        console.log(22222, '<- 打印 xxx');
         this.getCustomNavbarHeight();
     },
     getCustomNavbarHeight() {

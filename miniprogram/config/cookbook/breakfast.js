@@ -1,19 +1,25 @@
 const image = 'https://tdesign.gtimg.com/mobile/demos/example2.png';
 
+const baseUrl = 'https://gitee.com/GoodbyeMyself/gourmetry/raw/master/breakfast/';
+
+const getImageUrl = (imageName) => {
+    return `${baseUrl}${imageName}.jpg`;
+};
+
 const items = [
     {
         label: '豆浆油条',
-        image: 'https://gitee.com/GoodbyeMyself/gourmetry/raw/master/breakfast/doujiang.jpg',
+        image: getImageUrl('doujiang'),
         id: 'b-1'
     },
     {
         label: '包子馒头',
-        image: 'https://gitee.com/GoodbyeMyself/gourmetry/raw/master/breakfast/baozi.jpg',
+        image: getImageUrl('baozi'),
         id: 'b-2'
     },
     {
         label: '鸡蛋饼',
-        image: 'https://gitee.com/GoodbyeMyself/gourmetry/raw/master/breakfast/jidanbing.jpg',
+        image: getImageUrl('jidanbing'),
         id: 'b-3'
     },
     {

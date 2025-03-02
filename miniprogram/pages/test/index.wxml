@@ -1,3 +1,13 @@
+<view class="block">
+    <t-navbar
+        t-class-placeholder="t-navbar-placeholder"
+        t-class-content="t-navbar-content"
+        class="block"
+        title="测试页"
+        left-arrow
+        bind:go-back="handleBack"
+    />
+</view>
 <view>
     测试页
 </view>

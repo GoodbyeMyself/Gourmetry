@@ -1,10 +1,5 @@
 <!--index.wxml-->
-<view class="banner">
-    <view class="title">
-        <t-icon name="undertake-hold-up" size="42rpx" class="title-icon"/>
-        小杜老师的专属食堂
-    </view>
-</view>
+<view class="banner"></view>
 <!-- 菜单 -->
 <view class="side-bar-wrapper" style="height: calc(100vh - {{navbarHeight}}px)">
     <t-side-bar value="{{sideBarIndex}}" bind:change="onSideBarChange">
